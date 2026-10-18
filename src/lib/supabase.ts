@@ -12,7 +12,7 @@ export const isConfigured = Boolean(url && key && !url.includes('your-project-re
 const slot = new URLSearchParams(window.location.search).get('as') ?? '';
 export const storageSuffix = slot ? `:${slot}` : '';
 
-export const supabase = createClient(url ?? 'http://localhost:54321', key ?? 'missing-key', {
+export const supabase = createClient(url || 'http://localhost:54321', key || 'missing-key', {
   auth: { persistSession: true, autoRefreshToken: true, storageKey: `tpt-auth${storageSuffix}` },
 });
 
