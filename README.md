@@ -46,10 +46,10 @@ Testing as several teammates in one browser: add `?as=2`, `?as=3`… to the URL.
 
 ### 3. Deploy to GitHub Pages
 
-1. Create a GitHub repo and push this folder to `main`.
-2. Repo → **Settings → Secrets and variables → Actions → Variables**: add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
-3. Repo → **Settings → Pages → Source: GitHub Actions**.
-4. Push (or run the workflow manually). The site appears at `https://<user>.github.io/<repo>/`.
+1. The production Supabase URL + anon key are committed in `.env.production` (public by design; RLS protects the data).
+   Switching Supabase projects = edit that file.
+2. Repo → **Settings → Pages → Source: GitHub Actions**.
+3. Push to `main`. Live at https://corrigk.github.io/team-progress-tracker/
 
 ## Starting over with a new group
 
